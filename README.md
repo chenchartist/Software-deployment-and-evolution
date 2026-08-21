@@ -11,7 +11,7 @@ SampleApp is a basic C# console application that displays a message. It demonstr
 5. Run the Application
 
 
-Task 1.2, 1.3 or CustomApp
+Task 1.2, 1.3
 1.2, 1.3 is a basic Text processor or word counter app, using c# and Wix Toolset.
 
 both 1.2 and 1.3 is creating a windows desktop application, packaging with Wix Installer
