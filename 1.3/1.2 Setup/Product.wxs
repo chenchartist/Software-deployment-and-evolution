@@ -21,8 +21,14 @@
 
 	<Fragment>
 		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-			<Component Id="ProductComponent">
+			<Component Id="MainExecutable">
 				<File Id="TextProcessorEXE" Source="$(var.1.2.TargetPath)" KeyPath="yes" />
+			</Component>
+			<Component Id="Lib1DLL">
+				<File Id="TextProcessorLibDLL" Source="$(var.1.2.TargetDir)TextProcessorLibrary.dll" />
+			</Component>
+			<Component Id="Lib2DLL">
+				<File Id="TextProcessorUtilsDLL" Source="$(var.1.2.TargetDir)TextProcessorUtils.dll" />
 			</Component>
 		</ComponentGroup>
 	</Fragment>

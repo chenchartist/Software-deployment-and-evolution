@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using TextProcessorLib;
+using TextProcessorUtils;
 
 namespace TextProcessor
 {
@@ -7,9 +9,13 @@ namespace TextProcessor
     {
         private TextBox inputBox;
         private Label resultsLabel;
+        private WordCounter wordCounter;
+        private TextValidator validator;
 
         public Form1()
         {
+            wordCounter = new WordCounter();
+            validator = new TextValidator();
             Text = "Word Counter";
             Width = 400;
             Height = 300;
@@ -43,14 +49,14 @@ namespace TextProcessor
 
         private void CountBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(inputBox.Text) || inputBox.Text == "Paste your text here...")
+            if (!validator.IsValidText(inputBox.Text))
             {
                 MessageBox.Show("Enter some text first!");
                 return;
             }
 
-            int wordCount = inputBox.Text.Split(new[] { ' ', '\n', '\t' }, StringSplitOptions.RemoveEmptyEntries).Length;
-            resultsLabel.Text = "Word Count: " + wordCount;
+            int wordCount = wordCounter.CountWords(inputBox.Text);
+            resultsLabel.Text = $"Word Count: {wordCount}";
         }
     }
 }

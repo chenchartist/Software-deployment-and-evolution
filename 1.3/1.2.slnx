@@ -8,4 +8,6 @@
     <Build />
   </Project>
   <Project Path="1.2/1.2.csproj" Id="a8babbd5-5ade-49bb-af54-a652ee0f3080" />
+  <Project Path="TextProcessorLibrary/TextProcessorLibrary.csproj" Id="fefab586-2e39-4f30-a6b6-c12a840ab907" />
+  <Project Path="TextProcessorUtils/TextProcessorUtils.csproj" Id="22d2d25a-85b7-480e-9445-b963fca14eeb" />
 </Solution>
