@@ -30,12 +30,6 @@ namespace WebApplication2_2.Controllers
             return View(student);
         }
 
-        [HttpGet("/health")]
-        public IActionResult Health()
-        {
-            return Ok(new { status = "healthy", timestamp = DateTime.UtcNow, app = "StudentRegistrationApp" });
-        }
-
         public IActionResult Delete(int id)
         {
             var student = students.FirstOrDefault(s => s.Id == id);
